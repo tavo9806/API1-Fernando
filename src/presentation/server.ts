@@ -26,7 +26,10 @@ export class Server {
 
   async start() {
     
-    // Middlewares -> software que se ejecuta en cada ruta
+    //* Middlewares -> software que se ejecuta en cada ruta
+    this.app.use( express.json() ) // Acepta json y lo convierta a js
+
+
     //* Public Folder
     this.app.use(express.static( this.publicPath ));
 
